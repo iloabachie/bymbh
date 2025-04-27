@@ -7,12 +7,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/logo.jpg" type="image/x-icon">
   <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "XXXXX",
+      });
+    })();
+  </script>
 </head>
+
 <body>
   <header>
     <div class="container">
       <img src="images/full_logo.jpg" alt="company logo">
-      <h1>Because You Matter Behavioral Health</h1>      
+      <!-- <h1>Because You Matter Behavioral Health</h1> -->
+      <br/><br/> 
       <p>Your Journey to Wellness Starts Here</p>
       <a href="#contact" class="btn-primary">Get Started</a>
     </div>
@@ -53,10 +64,11 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Because You Matter Behavioral Health. All rights reserved.</p>
+      <p id="footer"></p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
