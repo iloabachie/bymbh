@@ -14,5 +14,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       status.textContent = 'Please fill in all fields.';
       status.style.color = 'red';
     }
-  });
+    }
+);
   
