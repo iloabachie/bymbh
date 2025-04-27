@@ -106,4 +106,8 @@
     margin-top: 15px;
     font-weight: bold;
   }
+
+  img {
+    border-radius: 24px;
+  }
   
