@@ -1,1 +1,109 @@
-hello world
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #f9fafc;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?mentalhealth,wellness') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #45a049;
+  }
+  
+  .section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section p, .section li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .services-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services-list li {
+    margin: 10px 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+  }
+  
+  #form-status {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
