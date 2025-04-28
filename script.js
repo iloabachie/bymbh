@@ -1,4 +1,7 @@
-emailjs.init('6GXpn1h2mojJlUVWh'); 
+const footer = document.getElementById('footer');
+const currentYear = new Date().getFullYear();
+footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health. All rights reserved.`;
+
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
@@ -7,6 +10,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     const status = document.getElementById('form-status');
+    const isoTimestamp = new Date().toISOString();
   
     const serviceID = 'service_a44s14o'; 
     const templateID = 'template_pmb4xgp'; 
@@ -16,12 +20,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         name: name,
         email: email,
         message: message,
-        title: "Webform Contact"
+        title: "Webform Contact",
+        time: new Date().toString()
         })
         .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
-        // alert('Message sent successfully!');
-        status.textContent = 'Thank you! We will get back to you soon.';
+        status.textContent = 'Your message has been sent.';
         status.style.color = 'green';
         document.getElementById('contact-form').reset();
         }, function(error) {
@@ -34,7 +38,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
 });
 
-const footer = document.getElementById('footer');
-const currentYear = new Date().getFullYear();
-
-footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health. All rights reserved.`;
