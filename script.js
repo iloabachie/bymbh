@@ -1,3 +1,18 @@
+// window.locationConfirmed = false;
+// window.addEventListener('message', function(event) {
+//   if (event.source === window && event.data.from === 'magnolia' && event.data.accessGranted) {
+//     console.log('Access granted.');
+//     window.locationConfirmed = true;
+//   } 
+// });
+
+// setTimeout(() => {
+//   if (!window.locationConfirmed) {
+//     document.body.innerHTML = "<h1 align='center'>Please log in from your workstation. Thank you.</h1>";
+//   }
+// }, 1000);
+
+
 const footer = document.getElementById('footer');
 const currentYear = new Date().getFullYear();
 footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health. All rights reserved.`;
@@ -38,3 +53,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
 });
 
+
+
+setInterval(myFunction, 1000);
+
+function myFunction() {
+    let d = new Date();
+    let hours = d.getHours()
+    let minutes = d.getMinutes().toString().padStart(2, '0')
+    let seconds = d.getSeconds().toString().padStart(2, '0')
+    document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
+}
