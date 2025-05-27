@@ -12,11 +12,9 @@
 //   }
 // }, 1000);
 
-
 const footer = document.getElementById('footer');
 const currentYear = new Date().getFullYear();
 footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health. All rights reserved.`;
-
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
@@ -52,8 +50,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         status.style.color = 'red';
     }
 });
-
-
 
 setInterval(myFunction, 1000);
 
