@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Because You Matter Behavioral Health</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "xxx",
+      });
+    })();
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="images/full_logo.jpg" alt="company logo">
+      <!-- <h1>Because You Matter Behavioral Health</h1> -->
+      <br/><br/> 
+      <p>Your Journey to Mental Wellness Starts Here</p>
+      <a href="#contact" class="btn-primary">Get Started</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Because You Matter Behavioral Health, we are dedicated to empowering individuals through compassionate, personalized care. Your mental health matters — and we're here to support you every step of the way.</p>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <ul class="services-list">
+        <li>Individual Therapy</li>
+        <li>Telehealth Appointments</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+      <p id="form-status"></p>
+    </div>
+  </section>
+
+
+  <a href="profile.html" >Profile</a>
+  <h4 id="time">Time Display</h4>
+  
+  <footer>
+    <div class="container">
+      <p id="footer"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
