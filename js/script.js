@@ -2,38 +2,39 @@ const footer = document.getElementById('copyright');
 const currentYear = new Date().getFullYear();
 footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health`;
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('appointment-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
   
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
     const status = document.getElementById('form-status');
-    const isoTimestamp = new Date().toISOString();
   
-    const serviceID = 'service_a44s14o'; 
+    const serviceID = 'service_hhikm7f'; 
     const templateID = 'template_pmb4xgp'; 
-    
+
     if (name && email && message) {
         emailjs.send(serviceID, templateID, {
         name: name,
         email: email,
+        phone: phone,
         message: message,
         title: "Webform Contact",
         time: new Date().toString()
         })
         .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
-        status.textContent = 'Your message has been sent.';
-        status.style.color = 'green';
-        document.getElementById('contact-form').reset();
-        }, function(error) {
+        alert('Message sent successfully.');
+        document.getElementById('appointment-form').reset();
+    }, function(error) {
         console.log('FAILED...', error);
-        alert('Failed to send message. Please try again later.');
+        status.textContent = 'There was an error in sending your message';
+        status.style.color = 'red';
         });
     } else {
         status.textContent = 'Please fill in all fields.';
-        status.style.color = 'red';
+        status.style.color = 'blue';
     }
 });
 
