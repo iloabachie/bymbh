@@ -21,13 +21,7 @@
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-style.css">
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-     <script type="text/javascript">
-          (function(){
-               emailjs.init({
-               publicKey: "6GXpn1h2mojJlUVWh",
-               });
-          })();
-     </script>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -279,6 +273,11 @@
                                         
                                         <label for="Message">Message</label>
                                         <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message" required></textarea>
+
+                                        <!-- Google reCAPTCHA widget -->
+                                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div><br>
+
+                                        <p id="captcha-error"></p>
                                         
                                         <button type="submit" class="form-control" id="cf-submit">Send Message</button>
                                    </div>

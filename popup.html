@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      width: 300px;
+      border-radius: 10px;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Trigger -->
+<button onclick="openModal()">Open Popup</button>
+
+<p onclick="openModal()">Adding onclick to a paragraph</p>
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>This is a custom popup!</p>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  // Optional: close when clicking outside modal
+  window.onclick = function(event) {
+    if (event.target == document.getElementById("myModal")) {
+      closeModal();
+    }
+  }
+</script>
+
+</body>
+</html>

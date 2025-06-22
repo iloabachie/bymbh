@@ -4,13 +4,27 @@ footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health`;
 
 document.getElementById('appointment-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
-  
+
+    emailjs.init({
+        publicKey: "6GXpn1h2mojJlUVWh",
+    });
+    
+    const captcha = document.getElementById('captcha-error')
+
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        captcha.textContent = 'Please complete the captcha';
+        captcha.style.color = 'red';
+        return;
+    };
+   
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
     const status = document.getElementById('form-status');
-  
+
     const serviceID = 'service_hhikm7f'; 
     const templateID = 'template_pmb4xgp'; 
 
@@ -35,8 +49,10 @@ document.getElementById('appointment-form').addEventListener('submit', function(
     } else {
         status.textContent = 'Please fill in all fields.';
         status.style.color = 'blue';
-    }
+    };
+    
 });
+
 
 setInterval(myFunction, 1000);
 
