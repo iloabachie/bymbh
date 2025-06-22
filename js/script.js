@@ -13,7 +13,7 @@ document.getElementById('appointment-form').addEventListener('submit', function(
 
     const recaptchaResponse = grecaptcha.getResponse();
     if (!recaptchaResponse) {
-        alert("Please complete the reCAPTCHA.");
+        // alert("Please complete the reCAPTCHA.");
         captcha.textContent = 'Please complete the captcha';
         captcha.style.color = 'red';
         return;
