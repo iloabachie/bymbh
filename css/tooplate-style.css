@@ -452,7 +452,7 @@ http://www.tooplate.com/view/2098-health
   }
 
   .slider .item-first {
-    background-image: url(../images/slider1.jpg);
+    background-image: url(../images/slider11.jpg);
   }
 
   .slider .item-second {
@@ -1055,3 +1055,16 @@ http://www.tooplate.com/view/2098-health
 
   }
 
+/*   Link in footer */
+
+
+.privacy {
+  color: #1a73e8;         /* Default link color (blue) */
+  text-decoration: none;  /* Removes underline */
+  transition: color 0.2s ease;
+}
+
+.privacy:hover {
+  color: #a5c422;         /* Hover color (red-ish) */
+  text-decoration: underline;
+}
