@@ -9,14 +9,14 @@ document.getElementById('appointment-form').addEventListener('submit', function(
         publicKey: "6GXpn1h2mojJlUVWh",
     });
     
-    const captcha = document.getElementById('captcha-error')
+    // const captcha = document.getElementById('captcha-error')
 
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-        captcha.textContent = 'Please complete the captcha';
-        captcha.style.color = 'red';
-        return;
-    };
+    // const recaptchaResponse = grecaptcha.getResponse();
+    // if (!recaptchaResponse) {
+    //     captcha.textContent = 'Please complete the captcha';
+    //     captcha.style.color = 'red';
+    //     return;
+    // };
    
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
