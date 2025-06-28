@@ -258,6 +258,12 @@ http://www.tooplate.com/view/2098-health
       MENU              
   -----------------------------------------*/
 
+
+  #nav-hover:hover {
+    color: #a5c422;
+    outline: none;
+  }
+
   header {
     background: #ffffff;
     border-bottom: 1px solid #f2f2f2;

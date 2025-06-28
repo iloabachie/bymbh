@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flexbox Example</title>
-  <style>
-    .flex-container {
-      display: flex;
-      justify-content: space-between; /* or space-around, center, etc. */
-      align-items: center;            /* aligns items vertically */
-      background-color: #f2f2f2;
-      padding: 20px;
-      border-radius: 10px;
-    }
+    <meta charset="UTF-8">
+    <title>Flexbox Example</title>
+    <style>
+        .flex-container {
+        display: flex;
+        justify-content: space-between; /* or space-around, center, etc. */
+        align-items: center;            /* aligns items vertically */
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        }
 
-    .flex-item {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 5px;
-      flex: 1;  /* each item takes equal width */
-      margin: 0 10px;
-    }
+        .flex-item {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        flex: 1;  /* each item takes equal width */
+        margin: 0 10px;
+        }
 
-    /* Optional: Make it responsive */
-    @media (max-width: 600px) {
-      .flex-container {
-        flex-direction: column;
-      }
+        /* Optional: Make it responsive */
+        @media (max-width: 600px) {
+        .flex-container {
+            flex-direction: column;
+        }
 
-      .flex-item {
-        margin: 10px 0;
-      }
-    }
-  </style>
+        .flex-item {
+            margin: 10px 0;
+        }
+        }
+    </style>
 </head>
 <body>
 
-  <h2>Flexbox Layout</h2>
-  <div class="flex-container">
-    <div class="flex-item">Item 1</div>
-    <div class="flex-item">Item 2</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item 3</div>
-  </div>
+    <h2>Flexbox Layout</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 3</div>
+    </div>
 
 </body>
 </html>
