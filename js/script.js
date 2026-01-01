@@ -1,6 +1,6 @@
 const footer = document.getElementById('copyright');
 const currentYear = new Date().getFullYear();
-footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health`;
+footer.innerHTML = `&copy; ${currentYear} Because You Matter Behavioral Health PLLC`;
 
 document.getElementById('appointment-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting normally
